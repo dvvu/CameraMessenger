@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAA02D561F3475E400FC371C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D551F3475E400FC371C /* main.m */; };
+		EAA02D591F3475E400FC371C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D581F3475E400FC371C /* AppDelegate.m */; };
+		EAA02D5C1F3475E400FC371C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D5B1F3475E400FC371C /* ViewController.m */; };
+		EAA02D5F1F3475E400FC371C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA02D5D1F3475E400FC371C /* Main.storyboard */; };
+		EAA02D611F3475E400FC371C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA02D601F3475E400FC371C /* Assets.xcassets */; };
+		EAA02D641F3475E400FC371C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */; };
+		EAA02D6F1F3475E400FC371C /* CamaraMessagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D6E1F3475E400FC371C /* CamaraMessagerTests.m */; };
+		EAA02D7A1F3475E400FC371C /* CamaraMessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D791F3475E400FC371C /* CamaraMessagerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAA02D6B1F3475E400FC371C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA02D491F3475E400FC371C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAA02D501F3475E400FC371C;
+			remoteInfo = CamaraMessager;
+		};
+		EAA02D761F3475E400FC371C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAA02D491F3475E400FC371C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAA02D501F3475E400FC371C;
+			remoteInfo = CamaraMessager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAA02D511F3475E400FC371C /* CamaraMessager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamaraMessager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA02D551F3475E400FC371C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAA02D571F3475E400FC371C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAA02D581F3475E400FC371C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAA02D5A1F3475E400FC371C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAA02D5B1F3475E400FC371C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAA02D5E1F3475E400FC371C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAA02D601F3475E400FC371C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAA02D631F3475E400FC371C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAA02D651F3475E400FC371C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA02D6A1F3475E400FC371C /* CamaraMessagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamaraMessagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA02D6E1F3475E400FC371C /* CamaraMessagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CamaraMessagerTests.m; sourceTree = "<group>"; };
+		EAA02D701F3475E400FC371C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA02D751F3475E400FC371C /* CamaraMessagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamaraMessagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA02D791F3475E400FC371C /* CamaraMessagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CamaraMessagerUITests.m; sourceTree = "<group>"; };
+		EAA02D7B1F3475E400FC371C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAA02D4E1F3475E400FC371C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D671F3475E400FC371C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D721F3475E400FC371C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAA02D481F3475E400FC371C = {
+			isa = PBXGroup;
+			children = (
+				EAA02D531F3475E400FC371C /* CamaraMessager */,
+				EAA02D6D1F3475E400FC371C /* CamaraMessagerTests */,
+				EAA02D781F3475E400FC371C /* CamaraMessagerUITests */,
+				EAA02D521F3475E400FC371C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAA02D521F3475E400FC371C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D511F3475E400FC371C /* CamaraMessager.app */,
+				EAA02D6A1F3475E400FC371C /* CamaraMessagerTests.xctest */,
+				EAA02D751F3475E400FC371C /* CamaraMessagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAA02D531F3475E400FC371C /* CamaraMessager */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D571F3475E400FC371C /* AppDelegate.h */,
+				EAA02D581F3475E400FC371C /* AppDelegate.m */,
+				EAA02D5A1F3475E400FC371C /* ViewController.h */,
+				EAA02D5B1F3475E400FC371C /* ViewController.m */,
+				EAA02D5D1F3475E400FC371C /* Main.storyboard */,
+				EAA02D601F3475E400FC371C /* Assets.xcassets */,
+				EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */,
+				EAA02D651F3475E400FC371C /* Info.plist */,
+				EAA02D541F3475E400FC371C /* Supporting Files */,
+			);
+			path = CamaraMessager;
+			sourceTree = "<group>";
+		};
+		EAA02D541F3475E400FC371C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D551F3475E400FC371C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAA02D6D1F3475E400FC371C /* CamaraMessagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D6E1F3475E400FC371C /* CamaraMessagerTests.m */,
+				EAA02D701F3475E400FC371C /* Info.plist */,
+			);
+			path = CamaraMessagerTests;
+			sourceTree = "<group>";
+		};
+		EAA02D781F3475E400FC371C /* CamaraMessagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D791F3475E400FC371C /* CamaraMessagerUITests.m */,
+				EAA02D7B1F3475E400FC371C /* Info.plist */,
+			);
+			path = CamaraMessagerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAA02D501F3475E400FC371C /* CamaraMessager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAA02D7E1F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessager" */;
+			buildPhases = (
+				EAA02D4D1F3475E400FC371C /* Sources */,
+				EAA02D4E1F3475E400FC371C /* Frameworks */,
+				EAA02D4F1F3475E400FC371C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CamaraMessager;
+			productName = CamaraMessager;
+			productReference = EAA02D511F3475E400FC371C /* CamaraMessager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAA02D691F3475E400FC371C /* CamaraMessagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAA02D811F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerTests" */;
+			buildPhases = (
+				EAA02D661F3475E400FC371C /* Sources */,
+				EAA02D671F3475E400FC371C /* Frameworks */,
+				EAA02D681F3475E400FC371C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAA02D6C1F3475E400FC371C /* PBXTargetDependency */,
+			);
+			name = CamaraMessagerTests;
+			productName = CamaraMessagerTests;
+			productReference = EAA02D6A1F3475E400FC371C /* CamaraMessagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAA02D741F3475E400FC371C /* CamaraMessagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAA02D841F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerUITests" */;
+			buildPhases = (
+				EAA02D711F3475E400FC371C /* Sources */,
+				EAA02D721F3475E400FC371C /* Frameworks */,
+				EAA02D731F3475E400FC371C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAA02D771F3475E400FC371C /* PBXTargetDependency */,
+			);
+			name = CamaraMessagerUITests;
+			productName = CamaraMessagerUITests;
+			productReference = EAA02D751F3475E400FC371C /* CamaraMessagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAA02D491F3475E400FC371C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Doan Van Vu";
+				TargetAttributes = {
+					EAA02D501F3475E400FC371C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					EAA02D691F3475E400FC371C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EAA02D501F3475E400FC371C;
+					};
+					EAA02D741F3475E400FC371C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EAA02D501F3475E400FC371C;
+					};
+				};
+			};
+			buildConfigurationList = EAA02D4C1F3475E400FC371C /* Build configuration list for PBXProject "CamaraMessager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAA02D481F3475E400FC371C;
+			productRefGroup = EAA02D521F3475E400FC371C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAA02D501F3475E400FC371C /* CamaraMessager */,
+				EAA02D691F3475E400FC371C /* CamaraMessagerTests */,
+				EAA02D741F3475E400FC371C /* CamaraMessagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAA02D4F1F3475E400FC371C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA02D641F3475E400FC371C /* LaunchScreen.storyboard in Resources */,
+				EAA02D611F3475E400FC371C /* Assets.xcassets in Resources */,
+				EAA02D5F1F3475E400FC371C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D681F3475E400FC371C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D731F3475E400FC371C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAA02D4D1F3475E400FC371C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA02D5C1F3475E400FC371C /* ViewController.m in Sources */,
+				EAA02D591F3475E400FC371C /* AppDelegate.m in Sources */,
+				EAA02D561F3475E400FC371C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D661F3475E400FC371C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA02D6F1F3475E400FC371C /* CamaraMessagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA02D711F3475E400FC371C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA02D7A1F3475E400FC371C /* CamaraMessagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAA02D6C1F3475E400FC371C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAA02D501F3475E400FC371C /* CamaraMessager */;
+			targetProxy = EAA02D6B1F3475E400FC371C /* PBXContainerItemProxy */;
+		};
+		EAA02D771F3475E400FC371C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAA02D501F3475E400FC371C /* CamaraMessager */;
+			targetProxy = EAA02D761F3475E400FC371C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAA02D5D1F3475E400FC371C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAA02D5E1F3475E400FC371C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAA02D631F3475E400FC371C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAA02D7C1F3475E400FC371C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAA02D7D1F3475E400FC371C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAA02D7F1F3475E400FC371C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CamaraMessager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAA02D801F3475E400FC371C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CamaraMessager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EAA02D821F3475E400FC371C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CamaraMessagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CamaraMessager.app/CamaraMessager";
+			};
+			name = Debug;
+		};
+		EAA02D831F3475E400FC371C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CamaraMessagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CamaraMessager.app/CamaraMessager";
+			};
+			name = Release;
+		};
+		EAA02D851F3475E400FC371C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CamaraMessagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CamaraMessager;
+			};
+			name = Debug;
+		};
+		EAA02D861F3475E400FC371C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CamaraMessagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CamaraMessager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAA02D4C1F3475E400FC371C /* Build configuration list for PBXProject "CamaraMessager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAA02D7C1F3475E400FC371C /* Debug */,
+				EAA02D7D1F3475E400FC371C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAA02D7E1F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAA02D7F1F3475E400FC371C /* Debug */,
+				EAA02D801F3475E400FC371C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EAA02D811F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAA02D821F3475E400FC371C /* Debug */,
+				EAA02D831F3475E400FC371C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EAA02D841F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAA02D851F3475E400FC371C /* Debug */,
+				EAA02D861F3475E400FC371C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAA02D491F3475E400FC371C /* Project object */;
+}
