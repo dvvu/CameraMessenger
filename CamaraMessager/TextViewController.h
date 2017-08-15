@@ -10,4 +10,6 @@
 
 @interface TextViewController : UIViewController
 
+- (void)dismissKeyboard;
+
 @end

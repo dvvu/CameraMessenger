@@ -198,7 +198,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dog"]];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_star"]];
     
     MediaItem* mediaItem = _mediaItems[indexPath.row];
     NSString* assetLibraryPath = mediaItem.identifier;
