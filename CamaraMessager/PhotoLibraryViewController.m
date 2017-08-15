@@ -14,7 +14,7 @@
 #import "MediaItem.h"
 #import "Masonry.h"
 
-@interface PhotoLibraryViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface PhotoLibraryViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
 
 @property (nonatomic) PhotoLibraryLoader* photoLibraryLoader;
 @property (nonatomic) UICollectionView* collectionView;
@@ -32,6 +32,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    _photoLibraryLoader = [PhotoLibraryLoader sharedInstance];
+    _photoQueue = dispatch_queue_create("PHOTO_QUEUE", DISPATCH_QUEUE_SERIAL);
     
     // check status
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
@@ -70,9 +73,6 @@
     [_collectionView setShowsHorizontalScrollIndicator:NO];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
     [self.view addSubview:_collectionView];
-    
-    _photoLibraryLoader = [PhotoLibraryLoader sharedInstance];
-    _photoQueue = dispatch_queue_create("PHOTO_QUEUE", DISPATCH_QUEUE_SERIAL);
 }
 
 #pragma mark - setupButton
@@ -86,14 +86,14 @@
 
 - (void)ConfigData {
     
-    [self setupCollectionView];
-    
     [_photoLibraryLoader checkPermission:^(NSError* error) {
         
         if((error.code == PHAuStatusDenied) || (error.code == PHAuStatusRestricted)) {
             
             [[[UIAlertView alloc] initWithTitle:@"This app requires access to your Galary to function properly." message: @"Please! Go to setting!" delegate:self cancelButtonTitle:@"CLOSE" otherButtonTitles:@"GO TO SETTING", nil] show];
         } else {
+            
+            [self setupCollectionView];
             
             [_photoLibraryLoader getImages:^(NSMutableArray* mediaItems, NSError* error) {
                 
@@ -283,6 +283,16 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+#pragma mark - alertView delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+    
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    }
 }
 
 @end
