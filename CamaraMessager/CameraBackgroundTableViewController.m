@@ -13,13 +13,18 @@
 @interface CameraBackgroundTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) CameraBackgroundController* cameraBackgroundController;
+@property (nonatomic) CameraBackgroundController* cameraBackgroundController1;
 @property (nonatomic) UISearchController* searchController;
 @property (nonatomic) UICollectionView* collectionView;
+@property (nonatomic) UICollectionView* collectionView1;
+@property (nonatomic) UICollectionViewFlowLayout* layout;
 @property (nonatomic) UITableView* tableView;
 
 @end
 
 @implementation CameraBackgroundTableViewController
+
+#pragma mark - initWithTableView
 
 - (instancetype)initWithTableView:(UITableView *)tableView withDelegate:(id)animationDelegate {
     
@@ -45,7 +50,6 @@
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
 
     [self createSearchController];
-    [self setupCollectionView];
 }
 
 #pragma mark - setupCollectionView
@@ -66,7 +70,32 @@
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
 
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:nil];
+    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+    _cameraBackgroundController.type = HighLightType;
     _cameraBackgroundController.animationDelegate = _animationDelegate;
+}
+
+#pragma mark - setupCollectionView1
+
+- (void)setupCollectionView1 {
+    
+    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.minimumInteritemSpacing = 5;
+    layout.minimumLineSpacing = 5;
+    layout.itemSize = CGSizeMake(collectionViewWidth, collectionViewHeight);
+    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    _collectionView1 = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, _tableView.frame.size.width, collectionViewHeight) collectionViewLayout:layout];
+    [_collectionView1 setBackgroundColor:[UIColor clearColor]];
+    [_collectionView1 setShowsVerticalScrollIndicator:NO];
+    [_collectionView1 setShowsHorizontalScrollIndicator:NO];
+    [_collectionView1 setBackgroundColor:[UIColor clearColor]];
+    [_collectionView1 registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    
+    _cameraBackgroundController1 = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView1 andParentViewController:nil];
+    _cameraBackgroundController1.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
+    _cameraBackgroundController1.type = FunnyType;
+    _cameraBackgroundController1.animationDelegate = _animationDelegate;
 }
 
 #pragma mark - createSearchController
@@ -84,7 +113,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
+    return 2;
 }
 
 #pragma mark - numberOfRowsInSection
@@ -104,9 +133,19 @@
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
     }
+    
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setBackgroundColor:[UIColor clearColor]];
-    [cell addSubview:_collectionView];
+    
+    if (indexPath.section == 0) {
+        
+        [self setupCollectionView];
+        [cell addSubview:_collectionView];
+    } else {
+        
+        [self setupCollectionView1];
+        [cell addSubview:_collectionView1];
+    }
     
     return cell;
 }
@@ -122,7 +161,12 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    return @"Nổi bật";
+    if (section == 0) {
+        
+        return @"Nổi bật";
+    }
+        
+    return @"Mọi ngày đều vui";
 }
 
 #pragma mark - heightForHeaderInSection

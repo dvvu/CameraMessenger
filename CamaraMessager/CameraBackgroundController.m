@@ -38,6 +38,8 @@
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
 }
 
+#pragma mark - collectionView dataSurce
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
     return 1;
@@ -47,20 +49,19 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 9;
+    return _imageNames.count;
 }
 
-#pragma mark - collectionView dataSurce
+#pragma mark - collectionView delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-   
-    NSString* imageName = [@"background_" stringByAppendingFormat:@"%d",(indexPath.row + 1)];
-    UIImage* image = [UIImage imageNamed:imageName];
+    
+    UIImage* image = [UIImage imageNamed:_imageNames[indexPath.row]];
     
     UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
     CGPoint point = [cell convertPoint:cell.center toView:nil];
     
-    [_animationDelegate showCollectionViewDelegate:image withPosition:point];
+    [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:point];
 }
 
 #pragma mark - collectionView dataSurce
@@ -68,8 +69,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    NSString* imageName = [@"background_" stringByAppendingFormat:@"%d",(indexPath.row + 1)];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+ 
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_imageNames[indexPath.row]]];
     cell.backgroundView.layer.masksToBounds = YES;
     cell.backgroundView.layer.cornerRadius = 6;
     [cell.backgroundView setBackgroundColor:[UIColor whiteColor]];

@@ -39,15 +39,17 @@
 
 @property (nonatomic) UIButton* changeCameRadirectionButton;
 @property (nonatomic) UIButton* cameraPhotoLibraryButton;
-@property (nonatomic) UIButton* captureButton;
-@property (nonatomic) UIButton* starButton;
 @property (nonatomic) UIButton* cameraExitButton;
 @property (nonatomic) UIButton* cameraTextButton;
+@property (nonatomic) UIButton* captureButton;
+@property (nonatomic) UIButton* starButton;
 
-@property (nonatomic) UIButton* textCameraButton;
-@property (nonatomic) UIButton* textExitButton;
 @property (nonatomic) UIButton* photoLibraryCameraButton;
 @property (nonatomic) UIButton* photoLibraryExitButton;
+@property (nonatomic) UIButton* textCameraButton;
+@property (nonatomic) UIButton* textExitButton;
+
+@property (nonatomic) CollectionViewType currentCollectionViewType;
 
 @end
 
@@ -63,6 +65,7 @@
     
     _width = self.view.frame.size.width;
     _backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    _backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     [_backgroundCCatalogView setHidden:YES];
     
     [self.view addSubview:_backgroundImageView];
@@ -216,6 +219,9 @@
     
     // setup dataSource for collectionView
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:self];
+    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+    _cameraBackgroundController.type = HighLightType;
+    _currentCollectionViewType = HighLightType;
     _cameraBackgroundController.animationDelegate = self;
 
     // add gesturn for _backgroundCCatalogView
@@ -672,11 +678,28 @@
 
 #pragma mark - showCollectionViewDelegate
 
-- (void)showCollectionViewDelegate:(UIImage *)image withPosition:(CGPoint)point {
+- (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewType)type andPosition:(CGPoint)point {
     
     if (![_backgroundCCatalogView isHidden]) {
         
     } else {
+        
+        if (_currentCollectionViewType != type) {
+            
+            _currentCollectionViewType = type;
+            
+            if (type == HighLightType) {
+                
+                _highlightLabel.text = @"Nổi bật";
+                _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+                [_collectionView reloadData];
+            } else {
+                
+                _highlightLabel.text = @"Mọi người đều vui";
+                _cameraBackgroundController.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
+                [_collectionView reloadData];
+            }
+        }
         
         _backgroundCCatalogView.center = CGPointMake(_currentPoint.x, point.y - 22.5);
         [self showCollectionView];

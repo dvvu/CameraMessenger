@@ -31,7 +31,6 @@ typedef enum {
 
 typedef enum {
     
-    PhotoLibraryController = 0,
-    CameraController = 1,
-    TextController = 2,
-} ViewControllerType;
+    HighLightType = 0,
+    FunnyType = 1,
+} CollectionViewType;
