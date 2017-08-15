@@ -73,14 +73,14 @@
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_imageNames[indexPath.row]]];
     cell.backgroundView.layer.masksToBounds = YES;
     cell.backgroundView.layer.cornerRadius = 6;
-    [cell.backgroundView setBackgroundColor:[UIColor whiteColor]];
-    cell.backgroundView.alpha = 1.0f;
+    [cell.backgroundView setBackgroundColor:[UIColor grayColor]];
+    cell.backgroundView.alpha = 0.8f;
     
     UIView* bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor clearColor];
     bgColorView.layer.cornerRadius = 6;
     bgColorView.layer.borderWidth = 1.0f;
-    bgColorView.layer.borderColor = [UIColor redColor].CGColor;
+    bgColorView.layer.borderColor = [UIColor whiteColor].CGColor;
     [cell setSelectedBackgroundView:bgColorView];
     
     return cell;

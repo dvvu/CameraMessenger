@@ -219,7 +219,7 @@
     
     // setup dataSource for collectionView
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:self];
-    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
     _cameraBackgroundController.type = HighLightType;
     _currentCollectionViewType = HighLightType;
     _cameraBackgroundController.animationDelegate = self;
@@ -691,7 +691,7 @@
             if (type == HighLightType) {
                 
                 _highlightLabel.text = @"Nổi bật";
-                _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+                _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
                 [_collectionView reloadData];
             } else {
                 

@@ -17,8 +17,8 @@
 @property (nonatomic) dispatch_queue_t cameraQueue;
 @property (nonatomic) AVCaptureSession* session;
 @property (nonatomic) UIView* backgroundView;
-@property (nonatomic) UIView* cameraView;
 @property (nonatomic) NSString* mediaType;
+@property (nonatomic) UIView* cameraView;
 
 @end
 

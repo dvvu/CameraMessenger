@@ -70,7 +70,7 @@
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
 
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:nil];
-    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4"];
+    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
     _cameraBackgroundController.type = HighLightType;
     _cameraBackgroundController.animationDelegate = _animationDelegate;
 }
