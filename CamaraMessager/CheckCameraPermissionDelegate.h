@@ -6,8 +6,9 @@
 //  Copyright © 2017 Doan Van Vu. All rights reserved.
 //
 
-#ifndef CheckCameraPermissionDelegate_h
-#define CheckCameraPermissionDelegate_h
+@protocol CheckCameraPermissionDelegate <NSObject>
 
+#pragma mark - cameraPermission
+- (void)cameraPermission:(BOOL)isAllow;
 
-#endif /* CheckCameraPermissionDelegate_h */
+@end

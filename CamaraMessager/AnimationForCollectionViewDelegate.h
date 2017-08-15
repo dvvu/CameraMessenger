@@ -6,8 +6,15 @@
 //  Copyright © 2017 Doan Van Vu. All rights reserved.
 //
 
-#ifndef AnimationForCollectionViewDelegate_h
-#define AnimationForCollectionViewDelegate_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@protocol AnimationForCollectionViewDelegate <NSObject>
 
-#endif /* AnimationForCollectionViewDelegate_h */
+#pragma mark - showCollectionView
+- (void)showCollectionViewDelegate:(UIImage *)image withPosition:(CGPoint)point;
+
+#pragma mark - showButton
+- (void)showButton;
+
+@end

@@ -12,6 +12,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 typedef NS_ENUM(NSInteger,InputType) {
+    
     NetWorkInput,
     AssetInput,
     FileLocalInput,
@@ -19,17 +20,11 @@ typedef NS_ENUM(NSInteger,InputType) {
 
 @interface MediaItem : NSObject
 
-@property (nonatomic, strong) NSString      *identifier;
-@property (nonatomic, assign) double        posttime;
-@property (nonatomic, strong) NSURL         *imageUrl;
-@property (nonatomic, strong) NSURL         *videoUrl;
-@property (nonatomic, strong) NSURL         *thumbailUrl;
-@property (nonatomic, assign) double        mediaType;
-@property (nonatomic, strong) NSString      *desc;
-@property (nonatomic, assign) double        imageHeight;
-@property (nonatomic, assign) double        imagewidth;
-@property (nonatomic, assign) InputType     inputType;
-@property (nonatomic, strong) AVURLAsset    *urlAsset;
-
+@property (nonatomic) NSString* identifier;
+@property (nonatomic) NSURL* imageUrl;
+@property (nonatomic) NSURL* videoUrl;
+@property (nonatomic) NSURL* thumbailUrl;
+@property (nonatomic, assign) InputType inputType;
+@property (nonatomic) AVURLAsset* urlAsset;
 
 @end

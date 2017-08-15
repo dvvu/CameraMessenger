@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E78EA14725AC4CC5EDDFED /* Pods_CamaraMessager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66C681F7570F0FC6E3C41A /* Pods_CamaraMessager.framework */; };
+		EA22B9731F399F4500049034 /* CameraBackgroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA22B9721F399F4500049034 /* CameraBackgroundController.m */; };
+		EA2D03FF1F3C810C00EF32EF /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2D03FE1F3C810C00EF32EF /* AnimationView.m */; };
+		EA5688D41F41412000C19E22 /* CameraBackgroundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5688D31F41412000C19E22 /* CameraBackgroundTableViewController.m */; };
 		EAA02D561F3475E400FC371C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D551F3475E400FC371C /* main.m */; };
 		EAA02D591F3475E400FC371C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D581F3475E400FC371C /* AppDelegate.m */; };
 		EAA02D5C1F3475E400FC371C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D5B1F3475E400FC371C /* ViewController.m */; };
@@ -15,6 +19,11 @@
 		EAA02D641F3475E400FC371C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */; };
 		EAA02D6F1F3475E400FC371C /* CamaraMessagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D6E1F3475E400FC371C /* CamaraMessagerTests.m */; };
 		EAA02D7A1F3475E400FC371C /* CamaraMessagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D791F3475E400FC371C /* CamaraMessagerUITests.m */; };
+		EAA02D891F34765900FC371C /* PhotoLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D881F34765900FC371C /* PhotoLibraryViewController.m */; };
+		EAA02D8C1F34766800FC371C /* CamaraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D8B1F34766800FC371C /* CamaraViewController.m */; };
+		EAA02D8F1F3476D700FC371C /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D8E1F3476D700FC371C /* TextViewController.m */; };
+		EADC2F001F381B5C00E977F2 /* PhotoLibraryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = EADC2EFF1F381B5C00E977F2 /* PhotoLibraryLoader.m */; };
+		EADC2F061F3856B900E977F2 /* MediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EADC2F051F3856B900E977F2 /* MediaItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30579EE323A1CBC0F6EEEF80 /* Pods-CamaraMessager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamaraMessager.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamaraMessager/Pods-CamaraMessager.release.xcconfig"; sourceTree = "<group>"; };
+		5C66C681F7570F0FC6E3C41A /* Pods_CamaraMessager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamaraMessager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		773A48E4E5C4FC79A94E62B2 /* Pods-CamaraMessager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamaraMessager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CamaraMessager/Pods-CamaraMessager.debug.xcconfig"; sourceTree = "<group>"; };
+		EA0D7ACF1F42AECC0052C0D6 /* CheckCameraPermissionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckCameraPermissionDelegate.h; sourceTree = "<group>"; };
+		EA22B9711F399F4500049034 /* CameraBackgroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundController.h; sourceTree = "<group>"; };
+		EA22B9721F399F4500049034 /* CameraBackgroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundController.m; sourceTree = "<group>"; };
+		EA2D03FD1F3C810C00EF32EF /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
+		EA2D03FE1F3C810C00EF32EF /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
+		EA5688D21F41412000C19E22 /* CameraBackgroundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundTableViewController.h; sourceTree = "<group>"; };
+		EA5688D31F41412000C19E22 /* CameraBackgroundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundTableViewController.m; sourceTree = "<group>"; };
+		EA5688D51F417E9700C19E22 /* AnimationForCollectionViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationForCollectionViewDelegate.h; sourceTree = "<group>"; };
+		EA5688D81F41B48400C19E22 /* GestureRecognizeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureRecognizeDelegate.h; sourceTree = "<group>"; };
 		EAA02D511F3475E400FC371C /* CamaraMessager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamaraMessager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA02D551F3475E400FC371C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAA02D571F3475E400FC371C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +72,17 @@
 		EAA02D751F3475E400FC371C /* CamaraMessagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamaraMessagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA02D791F3475E400FC371C /* CamaraMessagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CamaraMessagerUITests.m; sourceTree = "<group>"; };
 		EAA02D7B1F3475E400FC371C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAA02D871F34765900FC371C /* PhotoLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoLibraryViewController.h; sourceTree = "<group>"; };
+		EAA02D881F34765900FC371C /* PhotoLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoLibraryViewController.m; sourceTree = "<group>"; };
+		EAA02D8A1F34766800FC371C /* CamaraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraViewController.h; sourceTree = "<group>"; };
+		EAA02D8B1F34766800FC371C /* CamaraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraViewController.m; sourceTree = "<group>"; };
+		EAA02D8D1F3476D700FC371C /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		EAA02D8E1F3476D700FC371C /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		EADC2EFC1F3803E900E977F2 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EADC2EFE1F381B5C00E977F2 /* PhotoLibraryLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoLibraryLoader.h; sourceTree = "<group>"; };
+		EADC2EFF1F381B5C00E977F2 /* PhotoLibraryLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoLibraryLoader.m; sourceTree = "<group>"; };
+		EADC2F041F3856B900E977F2 /* MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItem.h; sourceTree = "<group>"; };
+		EADC2F051F3856B900E977F2 /* MediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E78EA14725AC4CC5EDDFED /* Pods_CamaraMessager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4CDC20F6932274D142F7692 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				773A48E4E5C4FC79A94E62B2 /* Pods-CamaraMessager.debug.xcconfig */,
+				30579EE323A1CBC0F6EEEF80 /* Pods-CamaraMessager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E344A6996E81AF531E5CFBD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C66C681F7570F0FC6E3C41A /* Pods_CamaraMessager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA15EDD11F3D4FA100CD3037 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D8A1F34766800FC371C /* CamaraViewController.h */,
+				EAA02D8B1F34766800FC371C /* CamaraViewController.m */,
+				EA22B9711F399F4500049034 /* CameraBackgroundController.h */,
+				EA22B9721F399F4500049034 /* CameraBackgroundController.m */,
+				EA5688D21F41412000C19E22 /* CameraBackgroundTableViewController.h */,
+				EA5688D31F41412000C19E22 /* CameraBackgroundTableViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		EA15EDD21F3D4FB600CD3037 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D8D1F3476D700FC371C /* TextViewController.h */,
+				EAA02D8E1F3476D700FC371C /* TextViewController.m */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		EA15EDD31F3D4FD500CD3037 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EA5688D51F417E9700C19E22 /* AnimationForCollectionViewDelegate.h */,
+				EA5688D81F41B48400C19E22 /* GestureRecognizeDelegate.h */,
+				EA0D7ACF1F42AECC0052C0D6 /* CheckCameraPermissionDelegate.h */,
+				EADC2EFC1F3803E900E977F2 /* Constants.h */,
+				EAA02D571F3475E400FC371C /* AppDelegate.h */,
+				EAA02D581F3475E400FC371C /* AppDelegate.m */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
+		EA42CA081F3AF8CA0024A2E1 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EA2D03FD1F3C810C00EF32EF /* AnimationView.h */,
+				EA2D03FE1F3C810C00EF32EF /* AnimationView.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		EAA02D481F3475E400FC371C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +179,8 @@
 				EAA02D6D1F3475E400FC371C /* CamaraMessagerTests */,
 				EAA02D781F3475E400FC371C /* CamaraMessagerUITests */,
 				EAA02D521F3475E400FC371C /* Products */,
+				B4CDC20F6932274D142F7692 /* Pods */,
+				E344A6996E81AF531E5CFBD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +197,9 @@
 		EAA02D531F3475E400FC371C /* CamaraMessager */ = {
 			isa = PBXGroup;
 			children = (
-				EAA02D571F3475E400FC371C /* AppDelegate.h */,
-				EAA02D581F3475E400FC371C /* AppDelegate.m */,
-				EAA02D5A1F3475E400FC371C /* ViewController.h */,
-				EAA02D5B1F3475E400FC371C /* ViewController.m */,
-				EAA02D5D1F3475E400FC371C /* Main.storyboard */,
-				EAA02D601F3475E400FC371C /* Assets.xcassets */,
-				EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */,
-				EAA02D651F3475E400FC371C /* Info.plist */,
+				EA15EDD31F3D4FD500CD3037 /* delegate */,
+				EAA02D901F3476E000FC371C /* ViewController */,
+				EAA02D911F3476F100FC371C /* View */,
 				EAA02D541F3475E400FC371C /* Supporting Files */,
 			);
 			path = CamaraMessager;
@@ -140,6 +231,43 @@
 			path = CamaraMessagerUITests;
 			sourceTree = "<group>";
 		};
+		EAA02D901F3476E000FC371C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA15EDD21F3D4FB600CD3037 /* Text */,
+				EA15EDD11F3D4FA100CD3037 /* Camera */,
+				EADC2EFD1F381ABE00E977F2 /* PhotoLibraryLoader */,
+				EA42CA081F3AF8CA0024A2E1 /* Animation */,
+				EAA02D5A1F3475E400FC371C /* ViewController.h */,
+				EAA02D5B1F3475E400FC371C /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		EAA02D911F3476F100FC371C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D5D1F3475E400FC371C /* Main.storyboard */,
+				EAA02D601F3475E400FC371C /* Assets.xcassets */,
+				EAA02D621F3475E400FC371C /* LaunchScreen.storyboard */,
+				EAA02D651F3475E400FC371C /* Info.plist */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EADC2EFD1F381ABE00E977F2 /* PhotoLibraryLoader */ = {
+			isa = PBXGroup;
+			children = (
+				EAA02D871F34765900FC371C /* PhotoLibraryViewController.h */,
+				EAA02D881F34765900FC371C /* PhotoLibraryViewController.m */,
+				EADC2F041F3856B900E977F2 /* MediaItem.h */,
+				EADC2F051F3856B900E977F2 /* MediaItem.m */,
+				EADC2EFE1F381B5C00E977F2 /* PhotoLibraryLoader.h */,
+				EADC2EFF1F381B5C00E977F2 /* PhotoLibraryLoader.m */,
+			);
+			name = PhotoLibraryLoader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAA02D7E1F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessager" */;
 			buildPhases = (
+				BF9C7485FF6AA51A7216AC19 /* [CP] Check Pods Manifest.lock */,
 				EAA02D4D1F3475E400FC371C /* Sources */,
 				EAA02D4E1F3475E400FC371C /* Frameworks */,
 				EAA02D4F1F3475E400FC371C /* Resources */,
+				DEF9434994EC0C97D211F1F1 /* [CP] Embed Pods Frameworks */,
+				D647B28B892573535049A5F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +338,7 @@
 				TargetAttributes = {
 					EAA02D501F3475E400FC371C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V2Q6A7M8X9;
 						ProvisioningStyle = Automatic;
 					};
 					EAA02D691F3475E400FC371C = {
@@ -268,13 +400,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF9C7485FF6AA51A7216AC19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D647B28B892573535049A5F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CamaraMessager/Pods-CamaraMessager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF9434994EC0C97D211F1F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CamaraMessager/Pods-CamaraMessager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EAA02D4D1F3475E400FC371C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EAA02D5C1F3475E400FC371C /* ViewController.m in Sources */,
+				EAA02D891F34765900FC371C /* PhotoLibraryViewController.m in Sources */,
+				EADC2F001F381B5C00E977F2 /* PhotoLibraryLoader.m in Sources */,
 				EAA02D591F3475E400FC371C /* AppDelegate.m in Sources */,
+				EA5688D41F41412000C19E22 /* CameraBackgroundTableViewController.m in Sources */,
+				EAA02D8F1F3476D700FC371C /* TextViewController.m in Sources */,
+				EADC2F061F3856B900E977F2 /* MediaItem.m in Sources */,
+				EA22B9731F399F4500049034 /* CameraBackgroundController.m in Sources */,
+				EAA02D8C1F34766800FC371C /* CamaraViewController.m in Sources */,
+				EA2D03FF1F3C810C00EF32EF /* AnimationView.m in Sources */,
 				EAA02D561F3475E400FC371C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,9 +612,12 @@
 		};
 		EAA02D7F1F3475E400FC371C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773A48E4E5C4FC79A94E62B2 /* Pods-CamaraMessager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V2Q6A7M8X9;
 				INFOPLIST_FILE = CamaraMessager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,9 +626,12 @@
 		};
 		EAA02D801F3475E400FC371C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30579EE323A1CBC0F6EEEF80 /* Pods-CamaraMessager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V2Q6A7M8X9;
 				INFOPLIST_FILE = CamaraMessager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VNG.CamaraMessager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +703,7 @@
 				EAA02D801F3475E400FC371C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAA02D811F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +712,7 @@
 				EAA02D831F3475E400FC371C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAA02D841F3475E400FC371C /* Build configuration list for PBXNativeTarget "CamaraMessagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +721,7 @@
 				EAA02D861F3475E400FC371C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,8 +6,13 @@
 //  Copyright © 2017 Doan Van Vu. All rights reserved.
 //
 
+#import "AnimationForCollectionViewDelegate.h"
 #import <Foundation/Foundation.h>
 
 @interface CameraBackgroundController : NSObject
+
+- (instancetype)initWithCollectionView:(UICollectionView *)collectionView andParentViewController:(UIViewController *)parentViewController;
+
+@property (nonatomic) id<AnimationForCollectionViewDelegate> animationDelegate;
 
 @end

@@ -7,31 +7,35 @@
 //
 
 #import "TextViewController.h"
+#import "Constants.h"
+#import "Masonry.h"
 
 @interface TextViewController ()
+
+@property (nonatomic) UITextField* textField;
 
 @end
 
 @implementation TextViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor colorWithRed:84/255.f green:162/255.f blue:214/255.f alpha:1.0f]];
+   
+    _textField = [[UITextField alloc]initWithFrame:self.view.frame];
+    _textField.textAlignment = NSTextAlignmentCenter;
+    [_textField setBackgroundColor:[UIColor clearColor]];
+    [_textField setFont:[UIFont fontWithName:@"Helvetica Neue" size:27]];
+    
+    _textField.placeholder = @"Hãy viết gì đó";
+    [self.view addSubview:_textField];
+    
+    [_textField mas_makeConstraints:^(MASConstraintMaker* make) {
+        
+        make.center.equalTo(self.view);
+        make.edges.equalTo(self.view);
+    }];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -10,4 +10,13 @@
 
 @interface PhotoLibraryLoader : NSObject
 
+#pragma mark - singleton
++ (instancetype)sharedInstance;
+
+#pragma mark - get permission
+- (void)checkPermission:(void(^)(NSError* error))completion;
+
+#pragma mark - get media
+- (void)getImages:(void (^)(NSMutableArray* mediaItems,NSError* error))completion;
+
 @end

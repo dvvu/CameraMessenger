@@ -9,30 +9,29 @@
 #ifndef Constants_h
 #define Constants_h
 
-
-#define iOS_VERSION_GREATER_THAN_OR_EQUAL_TO(version) [[[UIDevice currentDevice] systemVersion] floatValue] <= version
-
-// 5M
-#define MAX_CACHE_SIZE 5*1024*1024
-#define MAX_ITEM_SIZE 1024*1024
-#define KEYBOARD_HEADER_HEIGHT 35
-#define DEVICE_WIDTH [[UIScreen mainScreen] bounds].size.width
-#define DEVICE_HEIGHT [[UIScreen mainScreen] bounds].size.height
-
 #endif /* Constants_h */
 
-
 #pragma mark - contacts Authorizatio Status
+
+#define headerTableViewHeight 25
+#define searchBarheight 35
+#define collectionViewHeight 130
+#define collectionViewWidth 90
+#define cameraButtonBottomSpace 15
+#define capturnCameraButtonHeight 80
+#define headerHeight 118
+#define maximumBlurView 0.75
+#define cameraTableHeaderHeight 80
+
 typedef enum {
     
-    ContactAuthorizationStatusDenied = 1,
-    ContactAuthorizationStatusRestricted = 2,
-} ContactAuthorizationStatus;
+    PHAuStatusDenied = 1,
+    PHAuStatusRestricted = 2,
+} PHAuStatus;
 
-
-#pragma mark - contacts loading Error
 typedef enum {
     
-    ContactLoadingFailError = 3
-} ErorrCode;
-
+    PhotoLibraryController = 0,
+    CameraController = 1,
+    TextController = 2,
+} ViewControllerType;

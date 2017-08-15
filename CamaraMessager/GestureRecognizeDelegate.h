@@ -6,8 +6,11 @@
 //  Copyright © 2017 Doan Van Vu. All rights reserved.
 //
 
-#ifndef GestureRecognizeDelegate_h
-#define GestureRecognizeDelegate_h
+#import <Foundation/Foundation.h>
 
+@protocol GestureRecognizeDelegate <NSObject>
 
-#endif /* GestureRecognizeDelegate_h */
+#pragma mark - hideCollectionView
+- (void)gesturn:(BOOL)isGuesture;
+
+@end
