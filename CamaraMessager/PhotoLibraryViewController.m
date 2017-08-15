@@ -182,15 +182,15 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    MediaItem* mediaItem = _mediaItems[indexPath.row];
-    NSString* assetLibraryPath = mediaItem.identifier;
-    
-    [self requestImageFromAsset:assetLibraryPath withIndex:indexPath with:^(UIImage* image, NSIndexPath* index) {
-        
-        if (index == indexPath) {
-            
-        }
-    }];
+//    MediaItem* mediaItem = _mediaItems[indexPath.row];
+//    NSString* assetLibraryPath = mediaItem.identifier;
+//    
+//    [self requestImageFromAsset:assetLibraryPath withIndex:indexPath with:^(UIImage* image, NSIndexPath* index) {
+//        
+//        if (index == indexPath) {
+//            
+//        }
+//    }];
 }
 
 #pragma mark - collectionView delegate
@@ -200,16 +200,16 @@
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_star"]];
     
-    MediaItem* mediaItem = _mediaItems[indexPath.row];
-    NSString* assetLibraryPath = mediaItem.identifier;
-    
-    [self requestImageFromAsset:assetLibraryPath withIndex:indexPath with:^(UIImage* image, NSIndexPath* index) {
-        
-        if (index == indexPath) {
-            
-            cell.backgroundView = [[UIImageView alloc] initWithImage:image];
-        }
-    }];
+//    MediaItem* mediaItem = _mediaItems[indexPath.row];
+//    NSString* assetLibraryPath = mediaItem.identifier;
+//    
+//    [self requestImageFromAsset:assetLibraryPath withIndex:indexPath with:^(UIImage* image, NSIndexPath* index) {
+//        
+//        if (index == indexPath) {
+//            
+//            cell.backgroundView = [[UIImageView alloc] initWithImage:image];
+//        }
+//    }];
 
     return cell;
 }
