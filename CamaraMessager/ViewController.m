@@ -489,27 +489,21 @@
 
 - (IBAction)hideCollectionView:(id)sender {
 
-    [self hideCollectionView];
+    [UIView transitionWithView:self.view duration:0.5f options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
+        
+        _backgroundCCatalogView.frame = CGRectMake(_backgroundCCatalogView.frame.origin.x, self.view.frame.size.height, _backgroundCCatalogView.frame.size.width, _backgroundCCatalogView.frame.size.height);
+    } completion:^(BOOL finished) {
+        
+        _backgroundCCatalogView.center = _currentPoint;
+        _downButton.alpha = 1.0f;
+        [_starButton setHidden:NO];
+        [_backgroundCCatalogView setHidden:YES];
+    }];
 }
 
 #pragma mark - hide collectionView
 
 - (void)hideCollectionView {
-    
-//    [UIView animateWithDuration:.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^ {
-//        
-//        self.headerView.frame  = CGRectMake(0, 0, 320,30);
-//    } completion:^(BOOL finished) {
-//        
-//        [UIView animateWithDuration:.5 delay:2.0 options:UIViewAnimationOptionCurveEaseIn animations:^ {
-//            
-//            self.headerView.frame  = CGRectMake(0, -30, 320,30);
-//            
-//        } completion:^(BOOL finished) {
-//            
-//        }];
-//        
-//    }];
     
     [UIView transitionWithView:self.view duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
         
