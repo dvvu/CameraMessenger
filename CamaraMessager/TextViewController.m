@@ -21,9 +21,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
     [self.view setBackgroundColor:[UIColor colorWithRed:84/255.f green:162/255.f blue:214/255.f alpha:1.0f]];
    
-    _textField = [[UITextField alloc]initWithFrame:self.view.frame];
+    _textField = [[UITextField alloc]init];
     _textField.textAlignment = NSTextAlignmentCenter;
     [_textField setBackgroundColor:[UIColor clearColor]];
     [_textField setFont:[UIFont fontWithName:@"Helvetica Neue" size:27]];
@@ -34,8 +35,17 @@
     [_textField mas_makeConstraints:^(MASConstraintMaker* make) {
         
         make.center.equalTo(self.view);
-        make.edges.equalTo(self.view);
+        make.left.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-20);
     }];
+    
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)dismissKeyboard {
+    
+    [_textField resignFirstResponder];
 }
 
 @end

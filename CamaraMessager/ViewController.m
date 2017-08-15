@@ -526,6 +526,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
+    [_textViewController dismissKeyboard];
+    
     if (scrollView.contentOffset.x < _width) {
         
         // Camera Screen
