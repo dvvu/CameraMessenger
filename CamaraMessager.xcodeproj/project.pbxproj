@@ -153,19 +153,30 @@
 			name = Text;
 			sourceTree = "<group>";
 		};
-		EA15EDD31F3D4FD500CD3037 /* delegate */ = {
+		EA15EDD31F3D4FD500CD3037 /* Delegate&Constants */ = {
 			isa = PBXGroup;
 			children = (
 				EA5688D51F417E9700C19E22 /* AnimationForCollectionViewDelegate.h */,
-				EA5688D81F41B48400C19E22 /* GestureRecognizeDelegate.h */,
 				EA0D7ACF1F42AECC0052C0D6 /* CheckCameraPermissionDelegate.h */,
+				EA5688D81F41B48400C19E22 /* GestureRecognizeDelegate.h */,
 				EADC2EFC1F3803E900E977F2 /* Constants.h */,
-				EAA02D571F3475E400FC371C /* AppDelegate.h */,
-				EAA02D581F3475E400FC371C /* AppDelegate.m */,
 				EA2ABFF81F4455DF004CAF71 /* GlobalVars.h */,
 				EA2ABFF91F4455DF004CAF71 /* GlobalVars.m */,
 			);
-			name = delegate;
+			name = "Delegate&Constants";
+			sourceTree = "<group>";
+		};
+		EA2ABFFB1F445FE3004CAF71 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				EA42CA081F3AF8CA0024A2E1 /* Animation */,
+				EA15EDD21F3D4FB600CD3037 /* Text */,
+				EA15EDD11F3D4FA100CD3037 /* Camera */,
+				EADC2EFD1F381ABE00E977F2 /* PhotoLibraryLoader */,
+				EAA02D5A1F3475E400FC371C /* ViewController.h */,
+				EAA02D5B1F3475E400FC371C /* ViewController.m */,
+			);
+			name = ScrollView;
 			sourceTree = "<group>";
 		};
 		EA42CA081F3AF8CA0024A2E1 /* Animation */ = {
@@ -202,7 +213,7 @@
 		EAA02D531F3475E400FC371C /* CamaraMessager */ = {
 			isa = PBXGroup;
 			children = (
-				EA15EDD31F3D4FD500CD3037 /* delegate */,
+				EA15EDD31F3D4FD500CD3037 /* Delegate&Constants */,
 				EAA02D901F3476E000FC371C /* ViewController */,
 				EAA02D911F3476F100FC371C /* View */,
 				EAA02D541F3475E400FC371C /* Supporting Files */,
@@ -213,6 +224,8 @@
 		EAA02D541F3475E400FC371C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAA02D571F3475E400FC371C /* AppDelegate.h */,
+				EAA02D581F3475E400FC371C /* AppDelegate.m */,
 				EAA02D551F3475E400FC371C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -239,12 +252,7 @@
 		EAA02D901F3476E000FC371C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA15EDD21F3D4FB600CD3037 /* Text */,
-				EA15EDD11F3D4FA100CD3037 /* Camera */,
-				EADC2EFD1F381ABE00E977F2 /* PhotoLibraryLoader */,
-				EA42CA081F3AF8CA0024A2E1 /* Animation */,
-				EAA02D5A1F3475E400FC371C /* ViewController.h */,
-				EAA02D5B1F3475E400FC371C /* ViewController.m */,
+				EA2ABFFB1F445FE3004CAF71 /* ScrollView */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -265,10 +273,10 @@
 			children = (
 				EAA02D871F34765900FC371C /* PhotoLibraryViewController.h */,
 				EAA02D881F34765900FC371C /* PhotoLibraryViewController.m */,
-				EADC2F041F3856B900E977F2 /* MediaItem.h */,
-				EADC2F051F3856B900E977F2 /* MediaItem.m */,
 				EADC2EFE1F381B5C00E977F2 /* PhotoLibraryLoader.h */,
 				EADC2EFF1F381B5C00E977F2 /* PhotoLibraryLoader.m */,
+				EADC2F041F3856B900E977F2 /* MediaItem.h */,
+				EADC2F051F3856B900E977F2 /* MediaItem.m */,
 			);
 			name = PhotoLibraryLoader;
 			sourceTree = "<group>";

@@ -143,8 +143,7 @@
                  }
              }];
             
-            imageRequestOptions = nil;
-            
+            imageRequestOptions = nil;    
         } else {
            
             [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:videoRequestOptions resultHandler:^(AVAsset* _Nullable assetVideo, AVAudioMix* _Nullable audioMix, NSDictionary* _Nullable info) {

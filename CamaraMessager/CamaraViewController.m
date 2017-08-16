@@ -52,42 +52,42 @@
 
     dispatch_async(_cameraQueue, ^ {
         
-//        _session = [[AVCaptureSession alloc] init];
-//        
-//        AVCaptureDevice* videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-//       
-//        if (videoDevice) {
-//
-//            NSError* error;
-//            AVCaptureDeviceInput* videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
-//          
-//            if (!error) {
-//                
-//                if ([_session canAddInput:videoInput]) {
-//                    
-//                    [_session addInput:videoInput];
-//                }
-//                
-//                AVCaptureVideoPreviewLayer* previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
-//                previewLayer.frame = _cameraView.bounds;
-//                [_cameraView.layer addSublayer:previewLayer];
-//                
-//                _stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
-//                NSDictionary* outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
-//                [_stillImageOutput setOutputSettings:outputSettings];
-//                
-//                if ([_session canAddOutput:_stillImageOutput]) {
-//                    
-//                    [_session addOutput:_stillImageOutput];
-//                }
+        _session = [[AVCaptureSession alloc] init];
+        
+        AVCaptureDevice* videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+       
+        if (videoDevice) {
+
+            NSError* error;
+            AVCaptureDeviceInput* videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
+          
+            if (!error) {
+                
+                if ([_session canAddInput:videoInput]) {
+                    
+                    [_session addInput:videoInput];
+                }
+                
+                AVCaptureVideoPreviewLayer* previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
+                previewLayer.frame = _cameraView.bounds;
+                [_cameraView.layer addSublayer:previewLayer];
+                
+                _stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+                NSDictionary* outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+                [_stillImageOutput setOutputSettings:outputSettings];
+                
+                if ([_session canAddOutput:_stillImageOutput]) {
+                    
+                    [_session addOutput:_stillImageOutput];
+                }
         
                 dispatch_async(dispatch_get_main_queue(), ^ {
                     
                     [_session startRunning];
                     [_cameraDelegate cameraPermission:YES];
                 });
-//            }
-//        }
+            }
+        }
     });
 }
 

@@ -20,11 +20,11 @@ typedef NS_ENUM(NSInteger,InputType) {
 
 @interface MediaItem : NSObject
 
-@property (nonatomic) NSString* identifier;
-@property (nonatomic) NSURL* imageUrl;
-@property (nonatomic) NSURL* videoUrl;
-@property (nonatomic) NSURL* thumbailUrl;
 @property (nonatomic, assign) InputType inputType;
 @property (nonatomic) AVURLAsset* urlAsset;
+@property (nonatomic) NSString* identifier;
+@property (nonatomic) NSURL* thumbailUrl;
+@property (nonatomic) NSURL* imageUrl;
+@property (nonatomic) NSURL* videoUrl;
 
 @end

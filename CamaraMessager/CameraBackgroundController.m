@@ -79,29 +79,34 @@
     // current click in collectionType is this collectionView?
     if (_collectionViewType == _globals.currentCollectionViewType) {
         
-        if (_globals.selectedIndexpath != indexPath) {
+        if (!_globals.selectedIndexpath) {
             
             _globals.selectedIndexpath = indexPath;
-//            [cell setSelectedBackgroundView:_borderCellView];
             [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
         } else {
             
-            if (_globals.selectedIndexpath == nil) {
+            if (_globals.selectedIndexpath.row != indexPath.row) {
                 
                 _globals.selectedIndexpath = indexPath;
+                [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
             } else {
                 
-                _globals.selectedIndexpath = nil;
+                if (_globals.selectedIndexpath == nil) {
+                    
+                    _globals.selectedIndexpath = indexPath;
+                } else {
+                    
+                    _globals.selectedIndexpath = nil;
+                }
+                
+                [_animationDelegate showCollectionViewDelegate:nil withType:_type andPosition:_cellClickedPoint];
             }
-            
-//            [cell setSelectedBackgroundView:nil];
-            [_animationDelegate showCollectionViewDelegate:nil withType:_type andPosition:_cellClickedPoint];
         }
     } else {
        
         _globals.currentCollectionViewType = _collectionViewType;
         _globals.selectedIndexpath = indexPath;
-//        [cell setSelectedBackgroundView:_borderCellView];
+        
         [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
     }
 }
