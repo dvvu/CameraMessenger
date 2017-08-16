@@ -15,7 +15,8 @@
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView andParentViewController:(UIViewController *)parentViewController;
 
 @property (nonatomic) id<AnimationForCollectionViewDelegate> animationDelegate;
-@property (nonatomic) CollectionViewType type;
+@property (nonatomic) CollectionViewType collectionViewType;
+@property (nonatomic) CollectionViewDataType type;
 @property (nonatomic) NSArray* imageNames;
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05E78EA14725AC4CC5EDDFED /* Pods_CamaraMessager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66C681F7570F0FC6E3C41A /* Pods_CamaraMessager.framework */; };
 		EA22B9731F399F4500049034 /* CameraBackgroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA22B9721F399F4500049034 /* CameraBackgroundController.m */; };
+		EA2ABFFA1F4455DF004CAF71 /* GlobalVars.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABFF91F4455DF004CAF71 /* GlobalVars.m */; };
 		EA2D03FF1F3C810C00EF32EF /* AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2D03FE1F3C810C00EF32EF /* AnimationView.m */; };
 		EA5688D41F41412000C19E22 /* CameraBackgroundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5688D31F41412000C19E22 /* CameraBackgroundTableViewController.m */; };
 		EAA02D561F3475E400FC371C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA02D551F3475E400FC371C /* main.m */; };
@@ -50,6 +51,8 @@
 		EA0D7ACF1F42AECC0052C0D6 /* CheckCameraPermissionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckCameraPermissionDelegate.h; sourceTree = "<group>"; };
 		EA22B9711F399F4500049034 /* CameraBackgroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundController.h; sourceTree = "<group>"; };
 		EA22B9721F399F4500049034 /* CameraBackgroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraBackgroundController.m; sourceTree = "<group>"; };
+		EA2ABFF81F4455DF004CAF71 /* GlobalVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVars.h; sourceTree = "<group>"; };
+		EA2ABFF91F4455DF004CAF71 /* GlobalVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVars.m; sourceTree = "<group>"; };
 		EA2D03FD1F3C810C00EF32EF /* AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationView.h; sourceTree = "<group>"; };
 		EA2D03FE1F3C810C00EF32EF /* AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationView.m; sourceTree = "<group>"; };
 		EA5688D21F41412000C19E22 /* CameraBackgroundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraBackgroundTableViewController.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				EADC2EFC1F3803E900E977F2 /* Constants.h */,
 				EAA02D571F3475E400FC371C /* AppDelegate.h */,
 				EAA02D581F3475E400FC371C /* AppDelegate.m */,
+				EA2ABFF81F4455DF004CAF71 /* GlobalVars.h */,
+				EA2ABFF91F4455DF004CAF71 /* GlobalVars.m */,
 			);
 			name = delegate;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				EAA02D891F34765900FC371C /* PhotoLibraryViewController.m in Sources */,
 				EADC2F001F381B5C00E977F2 /* PhotoLibraryLoader.m in Sources */,
 				EAA02D591F3475E400FC371C /* AppDelegate.m in Sources */,
+				EA2ABFFA1F4455DF004CAF71 /* GlobalVars.m in Sources */,
 				EA5688D41F41412000C19E22 /* CameraBackgroundTableViewController.m in Sources */,
 				EAA02D8F1F3476D700FC371C /* TextViewController.m in Sources */,
 				EADC2F061F3856B900E977F2 /* MediaItem.m in Sources */,

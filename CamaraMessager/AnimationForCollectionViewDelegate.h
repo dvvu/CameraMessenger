@@ -13,7 +13,7 @@
 @protocol AnimationForCollectionViewDelegate <NSObject>
 
 #pragma mark - showCollectionView
-- (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewType)type andPosition:(CGPoint)point;
+- (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewDataType)type andPosition:(CGPoint)point;
 
 #pragma mark - showButton
 - (void)showButton;

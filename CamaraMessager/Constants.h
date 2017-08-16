@@ -33,4 +33,11 @@ typedef enum {
     
     HighLightType = 0,
     FunnyType = 1,
+} CollectionViewDataType;
+
+typedef enum {
+    
+    FirstCollectionViewType = 0,
+    SecondCollectionViewType = 1,
+    ThirdCollectionViewType = 2,
 } CollectionViewType;

@@ -49,7 +49,7 @@
 @property (nonatomic) UIButton* textCameraButton;
 @property (nonatomic) UIButton* textExitButton;
 
-@property (nonatomic) CollectionViewType currentCollectionViewType;
+@property (nonatomic) CollectionViewDataType currentCollectionViewType;
 
 @end
 
@@ -220,6 +220,7 @@
     // setup dataSource for collectionView
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:self];
     _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
+    _cameraBackgroundController.collectionViewType = FirstCollectionViewType;
     _cameraBackgroundController.type = HighLightType;
     _currentCollectionViewType = HighLightType;
     _cameraBackgroundController.animationDelegate = self;
@@ -680,41 +681,48 @@
 
 #pragma mark - showCollectionViewDelegate
 
-- (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewType)type andPosition:(CGPoint)point {
+- (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewDataType)type andPosition:(CGPoint)point {
     
-    if (![_backgroundCCatalogView isHidden]) {
+    if (image) {
         
-    } else {
-        
-        if (_currentCollectionViewType != type) {
+        if (![_backgroundCCatalogView isHidden]) {
             
-            _currentCollectionViewType = type;
+        } else {
             
-            if (type == HighLightType) {
+            if (_currentCollectionViewType != type) {
                 
-                _highlightLabel.text = @"Nổi bật";
-                _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
-                [_collectionView reloadData];
-            } else {
+                _currentCollectionViewType = type;
                 
-                _highlightLabel.text = @"Mọi người đều vui";
-                _cameraBackgroundController.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
-                [_collectionView reloadData];
+                if (type == HighLightType) {
+                    
+                    _highlightLabel.text = @"Nổi bật";
+                    _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
+                    _cameraBackgroundController.collectionViewType = FirstCollectionViewType;
+                    [_collectionView reloadData];
+                } else {
+                    
+                    _highlightLabel.text = @"Tô điểm";
+                    _cameraBackgroundController.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
+                    _cameraBackgroundController.collectionViewType = SecondCollectionViewType;
+                    [_collectionView reloadData];
+                }
             }
+            
+            // scroll for the same collectionView just have clicked.
+            _backgroundCCatalogView.center = CGPointMake(_currentPoint.x, point.y - 22.5);
+            [_collectionView scrollRectToVisible:CGRectMake(point.x, 0, _collectionView.frame.size.width,  _collectionView.frame.size.height) animated:YES];
+            [self showCollectionView];
+            
+            [UIView animateWithDuration:1.0f delay:0.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                
+                _backgroundCCatalogView.center = _currentPoint;
+                [_backgroundView hideLayoutFromSupview];
+            } completion:^(BOOL finished) {
+                
+                [self showHideButton:NO];
+                [_starButton setHidden:YES];
+            }];
         }
-        
-        _backgroundCCatalogView.center = CGPointMake(_currentPoint.x, point.y - 22.5);
-        [self showCollectionView];
-        
-        [UIView animateWithDuration:1.0f delay:0.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            
-            _backgroundCCatalogView.center = _currentPoint;
-            [_backgroundView hideLayoutFromSupview];
-        } completion:^(BOOL finished) {
-            
-            [self showHideButton:NO];
-            [_starButton setHidden:YES];
-        }];
     }
     
     _backgroundImageView.image = image;

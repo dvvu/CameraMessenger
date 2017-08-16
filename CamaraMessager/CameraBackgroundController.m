@@ -7,12 +7,16 @@
 //
 
 #import "CameraBackgroundController.h"
+#import "GlobalVars.h"
 #import "Constants.h"
 
 @interface CameraBackgroundController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic) UICollectionView* collectionView;
 @property (nonatomic) UIViewController* parentController;
+@property (nonatomic) UICollectionView* collectionView;
+@property (nonatomic) CGPoint cellClickedPoint;
+@property (nonatomic) UIView* borderCellView;
+@property (nonatomic) GlobalVars* globals;
 
 @end
 
@@ -24,6 +28,7 @@
         
         [self initCollectionView:collectionView];
         _parentController = parentViewController;
+        _globals = [GlobalVars sharedInstance];
     }
     return self;
 }
@@ -35,7 +40,14 @@
     _collectionView = collectionView;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
+    [_collectionView setContentInset:UIEdgeInsetsMake(0, 10, 0, 0)];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    
+    _borderCellView = [[UIView alloc] init];
+    _borderCellView.backgroundColor = [UIColor clearColor];
+    _borderCellView.layer.cornerRadius = 6;
+    _borderCellView.layer.borderWidth = 1.0f;
+    _borderCellView.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 #pragma mark - collectionView dataSurce
@@ -61,7 +73,37 @@
     UICollectionViewCell* cell = [collectionView cellForItemAtIndexPath:indexPath];
     CGPoint point = [cell convertPoint:cell.center toView:nil];
     
-    [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:point];
+    _cellClickedPoint.y = point.y;
+    _cellClickedPoint.x = _collectionView.contentOffset.x;
+    
+    // current click in collectionType is this collectionView?
+    if (_collectionViewType == _globals.currentCollectionViewType) {
+        
+        if (_globals.selectedIndexpath != indexPath) {
+            
+            _globals.selectedIndexpath = indexPath;
+//            [cell setSelectedBackgroundView:_borderCellView];
+            [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
+        } else {
+            
+            if (_globals.selectedIndexpath == nil) {
+                
+                _globals.selectedIndexpath = indexPath;
+            } else {
+                
+                _globals.selectedIndexpath = nil;
+            }
+            
+//            [cell setSelectedBackgroundView:nil];
+            [_animationDelegate showCollectionViewDelegate:nil withType:_type andPosition:_cellClickedPoint];
+        }
+    } else {
+       
+        _globals.currentCollectionViewType = _collectionViewType;
+        _globals.selectedIndexpath = indexPath;
+//        [cell setSelectedBackgroundView:_borderCellView];
+        [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
+    }
 }
 
 #pragma mark - collectionView dataSurce
@@ -76,13 +118,6 @@
     [cell.backgroundView setBackgroundColor:[UIColor grayColor]];
     cell.backgroundView.alpha = 0.8f;
     
-    UIView* bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor clearColor];
-    bgColorView.layer.cornerRadius = 6;
-    bgColorView.layer.borderWidth = 1.0f;
-    bgColorView.layer.borderColor = [UIColor whiteColor].CGColor;
-    [cell setSelectedBackgroundView:bgColorView];
-    
     return cell;
 }
 
@@ -91,6 +126,11 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     return CGSizeMake(collectionViewWidth, collectionViewHeight);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    _cellClickedPoint.x = scrollView.contentOffset.x;
 }
 
 @end

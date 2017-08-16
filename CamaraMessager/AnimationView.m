@@ -68,6 +68,8 @@
     [_dismissButton setHidden:NO];
     [_backgroundView setHidden:NO];
     [self setHidden:NO];
+
+    [_tableView setContentOffset:CGPointZero animated:YES];
 }
 
 #pragma mark - setup Layout
@@ -92,7 +94,7 @@
             make.width.and.height.mas_equalTo(40);
         }];
         
-        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 80)];
+        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height - 70)];
         [self addSubview:_backgroundView];
         
         [_backgroundView mas_makeConstraints:^(MASConstraintMaker* make) {
@@ -116,10 +118,7 @@
     
     [_tableView mas_makeConstraints:^(MASConstraintMaker* make) {
 
-        make.top.equalTo(_backgroundView.mas_top).offset(0);
-        make.left.equalTo(_backgroundView.mas_left).offset(0);
-        make.right.equalTo(_backgroundView.mas_right).offset(0);
-        make.height.mas_equalTo(_backgroundView.frame.size.height);
+        make.edges.equalTo(_backgroundView);
     }];
     
     _cameraBackgroundTableViewController = [[CameraBackgroundTableViewController alloc] initWithTableView:_tableView withDelegate:_animationDelegate];
@@ -128,7 +127,7 @@
     _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognize:)];
     [_tableView addGestureRecognizer:_panGesture];
     _panGesture.delegate = self;
-    _currentPoint = _tableView.center;
+    _currentPoint = _backgroundView.center;
 }
 
 #pragma mark - setup Layout
@@ -198,7 +197,7 @@
         
         [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
 
-            panGesture.view.center = finalPoint;
+            _tableView.center = finalPoint;
         } completion:^(BOOL finished) {
             
             if (threshold <= scrollSuccessThreshold) {

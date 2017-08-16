@@ -17,7 +17,7 @@
 @property (nonatomic) UISearchController* searchController;
 @property (nonatomic) UICollectionView* collectionView;
 @property (nonatomic) UICollectionView* collectionView1;
-@property (nonatomic) UICollectionViewFlowLayout* layout;
+@property (nonatomic) UIView* cellSeperatorView;
 @property (nonatomic) UITableView* tableView;
 
 @end
@@ -37,18 +37,18 @@
     return self;
 }
 
-#pragma mark - init with TableView
+#pragma mark - initwithTableView
 
 - (void)initTableView:(UITableView *)tableView {
     
     _tableView = tableView;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
+    [_tableView setBackgroundColor:[UIColor clearColor]];
     [_tableView setBounces:NO];
     
-    [_tableView setBackgroundColor:[UIColor clearColor]];
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
-
     [self createSearchController];
 }
 
@@ -63,7 +63,6 @@
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, _tableView.frame.size.width, collectionViewHeight) collectionViewLayout:layout];
-    [_collectionView setBackgroundColor:[UIColor clearColor]];
     [_collectionView setShowsVerticalScrollIndicator:NO];
     [_collectionView setShowsHorizontalScrollIndicator:NO];
     [_collectionView setBackgroundColor:[UIColor clearColor]];
@@ -72,6 +71,7 @@
     _cameraBackgroundController = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView andParentViewController:nil];
     _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
     _cameraBackgroundController.type = HighLightType;
+    _cameraBackgroundController.collectionViewType = FirstCollectionViewType;
     _cameraBackgroundController.animationDelegate = _animationDelegate;
 }
 
@@ -86,7 +86,6 @@
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
     _collectionView1 = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, _tableView.frame.size.width, collectionViewHeight) collectionViewLayout:layout];
-    [_collectionView1 setBackgroundColor:[UIColor clearColor]];
     [_collectionView1 setShowsVerticalScrollIndicator:NO];
     [_collectionView1 setShowsHorizontalScrollIndicator:NO];
     [_collectionView1 setBackgroundColor:[UIColor clearColor]];
@@ -95,6 +94,7 @@
     _cameraBackgroundController1 = [[CameraBackgroundController alloc] initWithCollectionView:_collectionView1 andParentViewController:nil];
     _cameraBackgroundController1.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
     _cameraBackgroundController1.type = FunnyType;
+    _cameraBackgroundController1.collectionViewType = SecondCollectionViewType;
     _cameraBackgroundController1.animationDelegate = _animationDelegate;
 }
 
@@ -106,7 +106,7 @@
     _searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     _searchController.dimsBackgroundDuringPresentation = YES;
     [_searchController.searchBar sizeToFit];
-    _tableView.tableHeaderView = _searchController.searchBar;
+    [_tableView setTableHeaderView:_searchController.searchBar];
 }
 
 #pragma mark - numberOfSectionsInTableView
@@ -133,9 +133,14 @@
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
     }
-    
+   
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     [cell setBackgroundColor:[UIColor clearColor]];
+    
+    _cellSeperatorView = [[UIView alloc] initWithFrame:CGRectZero];
+    [_cellSeperatorView setBackgroundColor:[UIColor lightGrayColor]];
+    [_cellSeperatorView setFrame:CGRectMake(0, collectionViewHeight + 9, tableView.frame.size.width, 1)];
+    [cell addSubview:_cellSeperatorView];
     
     if (indexPath.section == 0) {
         
@@ -157,23 +162,34 @@
     return collectionViewHeight + 10;
 }
 
-#pragma mark - heightForRowAttitleForHeaderInSectionIndexPath
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    if (section == 0) {
-        
-        return @"Nổi bật";
-    }
-        
-    return @"Mọi ngày đều vui";
-}
-
 #pragma mark - heightForHeaderInSection
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section {
   
     return 25;
+}
+
+#pragma mark - viewForHeaderInSection
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView* viewHeader = [UIView.alloc initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 25)];
+    UILabel* titleLabel = [UILabel.alloc initWithFrame:viewHeader.frame];
+    
+    [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:18]];
+    [titleLabel setTextColor:[UIColor whiteColor]];
+    [titleLabel setBackgroundColor:[UIColor clearColor]];
+    [viewHeader addSubview:titleLabel];
+
+    if (section == 0) {
+        
+        titleLabel.text = @"  Nổi bật";
+    } else {
+        
+        titleLabel.text = @"  Tô điểm";
+    }
+    return viewHeader;
 }
 
 #pragma mark - scrollViewDidScroll
@@ -189,5 +205,6 @@
         [_guestureDelegate gesturn:NO];
     }
 }
+
 
 @end
