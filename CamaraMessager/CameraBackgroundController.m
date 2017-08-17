@@ -85,7 +85,7 @@
             [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];
         } else {
             
-            if (_globals.selectedIndexpath.row != indexPath.row) {
+            if (_globals.selectedIndexpath.row != indexPath.row && _globals.selectedIndexpath.section != indexPath.section) {
                 
                 _globals.selectedIndexpath = indexPath;
                 [_animationDelegate showCollectionViewDelegate:image withType:_type andPosition:_cellClickedPoint];

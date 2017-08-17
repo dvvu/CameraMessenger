@@ -679,6 +679,16 @@
     [self showHideButton:NO];
 }
 
+#pragma mark - reloadData
+
+- (void)reloadData:(void (^)())completion {
+   
+    if (completion) {
+        
+        [_collectionView reloadData];
+    }
+}
+
 #pragma mark - showCollectionViewDelegate
 
 - (void)showCollectionViewDelegate:(UIImage *)image withType:(CollectionViewDataType)type andPosition:(CGPoint)point {
@@ -699,12 +709,14 @@
                     _cameraBackgroundController.imageNames = @[@"background_1",@"background_2",@"background_3",@"background_4",@"background_5"];
                     _cameraBackgroundController.collectionViewType = FirstCollectionViewType;
                     [_collectionView reloadData];
+                    [_collectionView layoutIfNeeded];
                 } else {
                     
                     _highlightLabel.text = @"Tô điểm";
                     _cameraBackgroundController.imageNames = @[@"background1",@"background2",@"background3",@"background4",@"background5",@"background6"];
                     _cameraBackgroundController.collectionViewType = SecondCollectionViewType;
                     [_collectionView reloadData];
+                    [_collectionView layoutIfNeeded];
                 }
             }
             

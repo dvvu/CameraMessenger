@@ -47,7 +47,10 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
     [_tableView setBackgroundColor:[UIColor clearColor]];
-    [_tableView setBounces:NO];
+    
+    UIView* backgroundTableView = [UIView new];
+    backgroundTableView.backgroundColor = [UIColor clearColor];
+    [_tableView setBackgroundView:backgroundTableView];
     
     [self createSearchController];
 }
